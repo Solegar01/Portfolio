@@ -1,34 +1,56 @@
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('home');
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const { offsetTop, offsetHeight } = el;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <>
-      <Navbar />
-      {/* Section isi halaman */}
-      <main className="pt-16"> {/* Untuk menghindari overlap dengan navbar fixed */}
-        <section id="home" className="min-h-screen bg-gray-900 text-white">
-          <h1 className="text-4xl font-bold p-8">Welcome</h1>
-        </section>
-
-        <section id="about" className="min-h-screen bg-gray-800 text-white">
-          <h2 className="text-3xl font-bold p-8">About Me</h2>
-          <About/>
-        </section>
-
-        <section id="projects" className="min-h-screen bg-gray-700 text-white">
-          <h2 className="text-3xl font-bold p-8">Projects</h2>
-          <Projects/>
-        </section>
-
-        <section id="contact" className="min-h-screen bg-gray-600 text-white">
-          <h2 className="text-3xl font-bold p-8">Contact</h2>
-          <Contact/>
-        </section>
-      </main>
-    </>
+    <div className="min-h-screen bg-white">
+      <Navbar
+        activeSection={activeSection}
+        scrollToSection={scrollToSection}
+      />
+      <HeroSection scrollToSection={scrollToSection} />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
+    </div>
   );
 }
 
