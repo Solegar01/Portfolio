@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+      {/* Section isi halaman */}
+      <main className="pt-16"> {/* Untuk menghindari overlap dengan navbar fixed */}
+        <section id="home" className="min-h-screen bg-gray-900 text-white">
+          <h1 className="text-4xl font-bold p-8">Welcome to My Portfolio</h1>
+        </section>
+
+        <section id="about" className="min-h-screen bg-gray-800 text-white">
+          <h2 className="text-3xl font-bold p-8">About Me</h2>
+          <About/>
+        </section>
+
+        <section id="projects" className="min-h-screen bg-gray-700 text-white">
+          <h2 className="text-3xl font-bold p-8">Projects</h2>
+          <Projects/>
+        </section>
+
+        <section id="contact" className="min-h-screen bg-gray-600 text-white">
+          <h2 className="text-3xl font-bold p-8">Contact</h2>
+          <Contact/>
+        </section>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
