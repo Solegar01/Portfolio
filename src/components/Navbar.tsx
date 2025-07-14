@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/Solegar.jpeg'; // Ganti dengan path gambar kamu
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Navbar() {
             <span>
               <div className="flex items-center space-x-4">
                 <img
-                  src="./public/solegar.jpeg" // Ganti dengan path gambar kamu
+                  src={logo} // Ganti dengan path gambar kamu
                   alt="Logo"
                   className="w-14 h-14 rounded-full shadow-lg"
                 />
