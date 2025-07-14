@@ -22,7 +22,7 @@ export default function ContactSection() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:alex@example.com"
+                  href="mailto:solegar01@gmail.com"
                   className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <Mail className="text-indigo-600" size={24} />
