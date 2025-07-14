@@ -1,5 +1,4 @@
 // src/components/AboutSection.tsx
-import React from 'react';
 import { Code, Palette, Zap, Users } from 'lucide-react';
 
 export default function AboutSection() {

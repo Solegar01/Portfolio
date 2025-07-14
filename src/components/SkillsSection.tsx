@@ -1,6 +1,4 @@
 // src/components/SkillsSection.tsx
-import React from 'react';
-
 interface Skill {
   name: string;
   level: number;
