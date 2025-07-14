@@ -7,12 +7,12 @@ export default function HeroSection({ scrollToSection }: { scrollToSection: (id:
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6 animate-slide-up">
-            Hi, I'm <span className="text-indigo-600">Alex</span>
+            Hi, I'm <span className="text-indigo-600">Solegar</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 animate-slide-up animation-delay-200">
-            Full Stack Developer & UI/UX Designer
+            .NET & Flutter Android Developer
           </p>
-          <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto animate-slide-up animation-delay-400">
+          <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto animate-slide-up animation-delay-s400">
             I create beautiful, functional, and user-centered digital experiences that make a difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up animation-delay-600">

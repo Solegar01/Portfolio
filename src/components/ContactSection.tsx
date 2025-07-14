@@ -28,27 +28,27 @@ export default function ContactSection() {
                   <Mail className="text-indigo-600" size={24} />
                   <div>
                     <p className="font-medium text-gray-800">Email</p>
-                    <p className="text-gray-600">alex@example.com</p>
+                    <p className="text-gray-600">solegar01@gmail.com</p>
                   </div>
                 </a>
                 <a
-                  href="https://linkedin.com/in/alex"
+                  href="https://linkedin.com/in/solegar-56b6b11a7"
                   className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <Linkedin className="text-indigo-600" size={24} />
                   <div>
                     <p className="font-medium text-gray-800">LinkedIn</p>
-                    <p className="text-gray-600">linkedin.com/in/alex</p>
+                    <p className="text-gray-600">linkedin.com/in/solegar-56b6b11a7</p>
                   </div>
                 </a>
                 <a
-                  href="https://github.com/alex"
+                  href="https://github.com/solegar01"
                   className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <Github className="text-indigo-600" size={24} />
                   <div>
                     <p className="font-medium text-gray-800">GitHub</p>
-                    <p className="text-gray-600">github.com/alex</p>
+                    <p className="text-gray-600">github.com/solegar01</p>
                   </div>
                 </a>
               </div>

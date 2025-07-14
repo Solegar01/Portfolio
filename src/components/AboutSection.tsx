@@ -1,5 +1,6 @@
 // src/components/AboutSection.tsx
 import { Code, Palette, Zap, Users } from 'lucide-react';
+import photo from '../assets/Solegar.jpeg';
 
 export default function AboutSection() {
   return (
@@ -15,7 +16,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+              src={photo}
               alt="Profile"
               className="rounded-2xl shadow-xl"
             />
