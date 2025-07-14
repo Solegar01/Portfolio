@@ -10,7 +10,7 @@ function App() {
       {/* Section isi halaman */}
       <main className="pt-16"> {/* Untuk menghindari overlap dengan navbar fixed */}
         <section id="home" className="min-h-screen bg-gray-900 text-white">
-          <h1 className="text-4xl font-bold p-8">Welcome to My Portfolio</h1>
+          <h1 className="text-4xl font-bold p-8">Welcome</h1>
         </section>
 
         <section id="about" className="min-h-screen bg-gray-800 text-white">
